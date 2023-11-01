@@ -4,19 +4,37 @@ body {
 }
 header {
     background-color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.6rem;
+    color: aliceblue;
+    overflow: hidden;
 }
 
-ul.topnav {
+
+aside h1 {
+    float: left;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+}
+aside img {
+    float: left;
+    max-width: 10%;
+}
+
+nav ul.topnav {
+  position: relative;
   list-style-type: none;
   margin: 0;
-  padding: 0;
-  overflow: hidden;
-  
+  padding: 1rem;
+  left: 30%;
 }
 
-ul.topnav li {float: left;}
+nav ul.topnav li {
+    float: left;
+}
 
-ul.topnav li a {
+nav ul.topnav li a {
   display: block;
   color: white;
   text-align: center;
@@ -24,13 +42,32 @@ ul.topnav li a {
   text-decoration: none;
 }
 
-ul.topnav li a:hover:not(.active) {background-color: #111;}
+nav ul.topnav li a:hover:not(.active) {
+    background-color: #111;
+}
 
-ul.topnav li a.active {background-color: #04AA6D;}
+@media screen and (max-width: 970px) {
 
-ul.topnav li.right {float: right;}
+    nav ul.topnav  {
+    font-size: 1.4rem;
+    left: 10%;
+  }
 
-@media screen and (max-width: 600px) {
-  ul.topnav li.right, 
-  ul.topnav li {float: none;}
+  }
+
+@media screen and (max-width: 700px) {
+
+  nav ul.topnav li {
+    float: none;
+}
+nav ul.topnav {
+    left: 0;
+    font-size: 1.6rem;
+}
+    aside h1 {
+        display: none;
+    }
+    aside img {
+        float: none;
+    }
 }
